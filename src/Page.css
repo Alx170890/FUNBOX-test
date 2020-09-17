@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Exo 2.0 Thin";
+    src: url("./fonts/Exo2.0-Thin.otf") format("opentype");
+}
+
+body {    
+    font-family: 'Trebuchet MS', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: url(./img/Background.jpg) repeat;    
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body:before {
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 100%;    
+    top: 0;
+    left: 0;    
+    opacity: 0.5;    
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 70%, rgba(0,0,0,0.5) 100%);
+    z-index: -1;
+}  
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, p, div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+.container {    
+    width: 1120px;
+}
+
+.assortment__title {
+    font-size: 36px;
+    line-height: 1.2;    
+    color: #fff;
+    text-align: center;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    font-family: "Exo 2.0 Thin", sans-serif;
+}
+
+.assortment__list {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 1200px) {  
+    body {
+        height: 100%;
+    }  
+    .container {    
+        width: 720px;
+    }
+
+    .assortment__list {
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap-reverse;        
+        -ms-flex-pack: center;
+        justify-content: center;
+    }
+
+    .assortment__list-item {
+        margin: 0 20px 20px 20px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        height: 100%;
+    }
+
+    .container {    
+        width: 100%;
+    }
+
+    .assortment__list-item {
+        margin-bottom: 20px;        
+    }
+
+    .assortment__list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    body {
+        height: 100%;
+    }
+    .assortment__list-item {
+        margin: 0 0 20px 0;
+    }
+}
+
+@media screen and (min-height: 1120px) {
+    body {
+        height: 100vh;
+    }
+}
